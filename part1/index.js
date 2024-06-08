@@ -44,26 +44,30 @@ const userProfileSchema = new mongoose.Schema({
 
 const User = mongoose.model('user',userProfileSchema)
 
+
+
+
 // ! ====Crud Operation====
 
 // Create Doc
 
 // ! save()
-const newUser = new User({
-    username: 'Taimoor',
-    age:20,
-    birthday:new Date('2002-6-20'),
-    isActive:true,
-    hobbies: ['soccer','reading','coding'],
-    address:{
-        street:'dalazak',
-        city:'l',
-        postcode:3434
-    },
-    customData: {
-        country: 'hi'
-    }
-})
+
+// const newUser = new User({
+//     username: 'Taimoor',
+//     age:20,
+//     birthday:new Date('2002-6-20'),
+//     isActive:true,
+//     hobbies: ['soccer','reading','coding'],
+//     address:{
+//         street:'dalazak',
+//         city:'l',
+//         postcode:3434
+//     },
+//     customData: {
+//         country: 'hi'
+//     }
+// })
 // save document
 
 // newUser
@@ -98,66 +102,102 @@ const newUser = new User({
 // !insertMany()
 
 
-User.insertMany([
+// User.insertMany([
     
-    {
-    username: 'Uzair',
-    age:20,
-    birthday:new Date('2002-6-20'),
-    isActive:true,
-    hobbies: ['soccer','reading','coding'],
-    address:{
-        street:'dalazak',
-        city:'l',
-        postcode:3434
-    },
-    customData: {
-        country: 'hi'
-    }
-},
-  {
-    username: 'afnan',
-    age:20,
-    birthday:new Date('2002-6-20'),
-    isActive:true,
-    hobbies: ['soccer','reading','coding'],
-    address:{
-        street:'dalazak',
-        city:'l',
-        postcode:3434
-    },
-    customData: {
-        country: 'hi'
-    }
-},
+//     {
+//     username: 'Uzair',
+//     age:20,
+//     birthday:new Date('2002-6-20'),
+//     isActive:true,
+//     hobbies: ['soccer','reading','coding'],
+//     address:{
+//         street:'dalazak',
+//         city:'l',
+//         postcode:3434
+//     },
+//     customData: {
+//         country: 'hi'
+//     }
+// },
+//   {
+//     username: 'afnan',
+//     age:20,
+//     birthday:new Date('2002-6-20'),
+//     isActive:true,
+//     hobbies: ['soccer','reading','coding'],
+//     address:{
+//         street:'dalazak',
+//         city:'l',
+//         postcode:3434
+//     },
+//     customData: {
+//         country: 'hi'
+//     }
+// },
 
 
-  {
-    username: 'Yasu',
-    age:20,
-    birthday:new Date('2002-6-20'),
-    isActive:true,
-    hobbies: ['soccer','reading','coding'],
-    address:{
-        street:'dalazak',
-        city:'l',
-        postcode:3434
-    },
-    customData: {
-        country: 'hi'
-    }
-},
+//   {
+//     username: 'Yasu',
+//     age:20,
+//     birthday:new Date('2002-6-20'),
+//     isActive:true,
+//     hobbies: ['soccer','reading','coding'],
+//     address:{
+//         street:'dalazak',
+//         city:'l',
+//         postcode:3434
+//     },
+//     customData: {
+//         country: 'hi'
+//     }
+// },
 
 
 
 
 
-]).then((data)=>{
-    console.log(data);
+// ]).then((data)=>{
+//     console.log(data);
+// })
+// .catch((err)=>console.log(err))
+
+
+// ! Read Operation
+
+// !find()
+
+// User
+// .find()
+// .then((data)=>{
+//      console.log(data);
+// })
+// .catch((err)=>{
+//     console.log(err);
+// })
+
+// !findOne()
+
+
+// User
+// .findOne({
+//     age:26
+// })
+// .then((data)=>{
+//      console.log(data);
+// })
+// .catch((err)=>{
+//     console.log(err);
+// })
+// !findById()
+
+User
+.findById('666464985117f720c762f5a4')
+.then((data)=>{
+     console.log(data);
 })
-.catch((err)=>console.log(err))
-
-
+.catch((err)=>{
+    console.log(err);
+})
 
 
 
