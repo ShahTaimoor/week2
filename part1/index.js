@@ -190,14 +190,44 @@ const User = mongoose.model('user',userProfileSchema)
 // })
 // !findById()
 
-User
-.findById('666464985117f720c762f5a4')
-.then((data)=>{
-     console.log(data);
-})
-.catch((err)=>{
-    console.log(err);
-})
+// User
+// .findById('666464985117f720c762f5a4')
+// .then((data)=>{
+//      console.log(data);
+// })
+// .catch((err)=>{
+//     console.log(err);
+// })
+
+// !where()
+
+// const findUser = async ()=>{
+//     try{
+//         const users = await User.find().where('age').gte(20)
+//         console.log(users);
+//     }catch(e){
+//         console.log(e);
+//     }
+// }
+
+// findUser()
+
+// ! sort()  limit()
+
+
+const findUser = async ()=>{
+    try{
+        const users = await User.find().where('age').gte(20).sort({username:1}).
+        limit(1)
+        console.log(users);
+    }catch(e){
+        console.log(e);
+    }
+}
+
+findUser()
+
+
 
 
 
