@@ -215,20 +215,84 @@ const User = mongoose.model('user',userProfileSchema)
 // ! sort()  limit()
 
 
-const findUser = async ()=>{
-    try{
-        const users = await User.find().where('age').gte(20).sort({username:1}).
-        limit(1)
-        console.log(users);
-    }catch(e){
-        console.log(e);
-    }
-}
+// const findUser = async ()=>{
+//     try{
+//         const users = await User.find().where('age').gte(20).sort({username:1}).
+//         limit(1)
+//         console.log(users);
+//     }catch(e){
+//         console.log(e);
+//     }
+// }
 
-findUser()
-
-
+// findUser()
 
 
 
-app.listen(3000)
+
+// ! Updating documents
+
+// ! updateOne()
+// const updateDoc = async ()=>{
+//     try{
+// const updatedDoc = await User.updateOne({
+//     username:'Taimoor'
+// },{
+//     age:30,
+//     isActive:false
+// },{
+//     new:true
+// })
+// console.log(updatedDoc);
+//     }catch(e){
+//         console.log(e);
+//     }
+// }
+// updateDoc()
+
+
+// ! findByIdAndUpdate()
+
+// const updateDoc = async ()=>{
+//     try{
+// const updatedDoc = await User.findByIdAndUpdate(
+    
+//     '666464985117f720c762f5a4',
+//     {
+//     age:50,
+//     isActive:false,
+//     username:'io'
+// },{
+//     new:true
+// })
+// console.log(updatedDoc);
+//     }catch(e){
+//         console.log(e);
+//     }
+// }
+// updateDoc()
+
+// ! findOneAndUodate
+
+
+// const updateDoc = async ()=>{
+//     try{
+// const updatedDoc = await User.findOneAndUpdate(
+//     {
+//        username:'afnan',
+//     },
+   
+//     {
+//     age:40,
+//     isActive:false,
+//     username:'io'
+// },
+// {
+//     new:true
+// })
+// console.log(updatedDoc);
+//     }catch(e){
+//         console.log(e);
+//     }
+// }
+// updateDoc()
